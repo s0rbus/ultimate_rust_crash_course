@@ -1,5 +1,13 @@
 [workspace]
 members = [
-    "./exercise/a_variables/variables"
+    "./exercise/a_variables/variables",
+     "./exercise/b_functions",
+     "./exercise/c_simple_types",
+     "./exercise/d_control_flow_strings",
+     "./exercise/e_ownership_references",
+     "./exercise/f_structs_traits",
+     "./exercise/g_collections_enums",
+     "./exercise/h_closures_threads",
+     "./exercise/z_final_project"
 ]
 resolver = "2"
