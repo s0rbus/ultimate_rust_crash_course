@@ -10,6 +10,7 @@
 //
 // You will need to complete 1b as well before you will be able to run this program successfully.
 
+#[derive(Debug)]
 enum Shot {
     Bullseye,
     Hit(f64),
@@ -55,11 +56,14 @@ fn main() {
     for a in arrow_coords {
         a.print_description();
         if a.distance_from_center() < 1.0 {
-            shots.push(Shot::Bullseye)
+            shots.push(Shot::Bullseye);
+            println!("Bullseye");
         } else if a.distance_from_center() <= 5.0 {
-            shots.push(Shot::Hit(a.distance_from_center()))
+            shots.push(Shot::Hit(a.distance_from_center()));
+            println!("Hit ({})",a.distance_from_center());
         } else {
-            shots.push(Shot::Miss)
+            shots.push(Shot::Miss);
+            println!("Miss");
         }
     }
 
@@ -67,7 +71,7 @@ fn main() {
     // 3. Finally, loop through each shot in shots and add its points to total
 
     for s in shots {
-        total += s.points()
+        total += s.points();
     }
 
     println!("Final point total is: {}", total);
